@@ -1,11 +1,11 @@
 /**
   * Created by knoldus on 10/4/17.
   */
-class Main {
+object Main extends App{
 
   val queryResult=new QueryResult
-  queryResult.userByEmail("akhil@gmail.com")
-  queryResult.videoByName("Jio Offer")
+  queryResult.userByEmail("ashish1269@gmail.com")
+  queryResult.videoByName("Scala Tutorial")
   queryResult.videoByUseridYear(100,2015)
   queryResult.videoByUseridYearDesc(100,2015)
 

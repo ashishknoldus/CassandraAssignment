@@ -40,7 +40,7 @@ class QueryResult {
 
   def videoByUseridYear(id:Int,year:Int) = {
 
-    val res = session.execute(s"SELECT * FROM video_for_year where user_id=$id AND year>$year")
+    val res = session.execute(s"SELECT * FROM video_for_year_id where user_id=$id AND year>$year")
 
     val iterate = res.iterator()
 
