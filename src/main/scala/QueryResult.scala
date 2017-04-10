@@ -26,7 +26,7 @@ class QueryResult {
 
   def videoByName(name:String) = {
 
-    val res = session.execute(s"SELECT * FROM video where video_name='$name'")
+    val res = session.execute(s"SELECT * FROM video_for_name where video_name='$name'")
 
     val iterate = res.iterator()
 
@@ -40,7 +40,7 @@ class QueryResult {
 
   def videoByUseridYear(id:Int,year:Int) = {
 
-    val res = session.execute(s"SELECT * FROM video where user_id=$id AND year>$year")
+    val res = session.execute(s"SELECT * FROM video_for_year where user_id=$id AND year>$year")
 
     val iterate = res.iterator()
 
@@ -55,7 +55,7 @@ class QueryResult {
 
   def videoByUseridYearDesc(id:Int,year:Int) = {
 
-    val res = session.execute(s"SELECT * FROM video where user_id=$id AND year>$year ORDER BY year DESC")
+    val res = session.execute(s"SELECT * FROM video_for_year_id where user_id=$id AND year>$year ORDER BY year DESC")
 
     val iterate = res.iterator()
 
